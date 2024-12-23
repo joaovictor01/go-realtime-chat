@@ -3,6 +3,7 @@ import "./App.css";
 import { connect, sendMsg } from "./api";
 import Header from "./components/Header";
 import ChatHistory from "./components/ChatHistory";
+import ChatInput from "./components/ChatInput";
 
 class App extends Component {
   constructor(props) {
@@ -34,6 +35,7 @@ class App extends Component {
       <div classname="App">
         <Header />
         <ChatHistory chatHistory={this.state.chatHistory} />
+        <ChatInput send={this.send} />
       </div>
     );
   }
